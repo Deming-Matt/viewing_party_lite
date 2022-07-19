@@ -13,11 +13,37 @@ RSpec.describe 'register page' do
 
     expect(page).to have_content("Name")
     expect(page).to have_content("Email")
+    expect(page).to have_content("Password")
+    expect(page).to have_content("Password Confirmation")
     expect(page).to have_button("Register")
 
     fill_in "Name", with: "Sam Smith"
     fill_in "Email", with: "ssmith22@gmail.com"
+    fill_in "Password", with: "Cat"
+    fill_in "Password Confirmation", with: "Cat"
     click_button "Register"
     expect(current_path).to eq("/users/#{User.last.id}")
+  end
+
+  describe 'sad path' do
+    it 'forgets to fill out form correctly' do
+
+      visit '/registration'
+
+      expect(page).to have_content("Name")
+      expect(page).to have_content("Email")
+      expect(page).to have_content("Password")
+      expect(page).to have_content("Password Confirmation")
+      expect(page).to have_button("Register")
+
+      fill_in "Name", with: "Sam Smith"
+      fill_in "Email", with: "ssmith22@gmail.com"
+      fill_in "Password", with: "Cat1"
+      fill_in "Password Confirmation", with: "Cat"
+      click_button "Register"
+      expect(current_path).to eq("/registration")
+      expect(page).to have_content("Password confirmation doesn't match Password")
+      # expect(flash[:error]).to be_present
+    end
   end
 end

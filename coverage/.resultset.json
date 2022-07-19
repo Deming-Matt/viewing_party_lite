@@ -1,13 +1,13 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/clayash/turing/3module/projects/viewing_party_lite/app/helpers/application_helper.rb": {
+      "/Users/matthewdeming/turing/3Module/viewing_party_lite/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/clayash/turing/3module/projects/viewing_party_lite/app/facades/movie_facade.rb": {
+      "/Users/matthewdeming/turing/3Module/viewing_party_lite/app/facades/movie_facade.rb": {
         "lines": [
           1,
           null,
@@ -35,7 +35,7 @@
           null
         ]
       },
-      "/Users/clayash/turing/3module/projects/viewing_party_lite/app/models/party.rb": {
+      "/Users/matthewdeming/turing/3Module/viewing_party_lite/app/models/party.rb": {
         "lines": [
           1,
           1,
@@ -59,22 +59,21 @@
           15,
           null,
           null,
-          1,
-          0,
-          0,
+          null,
+          null,
           null,
           null,
           null
         ]
       },
-      "/Users/clayash/turing/3module/projects/viewing_party_lite/app/models/application_record.rb": {
+      "/Users/matthewdeming/turing/3Module/viewing_party_lite/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/clayash/turing/3module/projects/viewing_party_lite/app/models/user_party.rb": {
+      "/Users/matthewdeming/turing/3Module/viewing_party_lite/app/models/user_party.rb": {
         "lines": [
           1,
           1,
@@ -82,18 +81,22 @@
           null
         ]
       },
-      "/Users/clayash/turing/3module/projects/viewing_party_lite/app/models/user.rb": {
+      "/Users/matthewdeming/turing/3Module/viewing_party_lite/app/models/user.rb": {
         "lines": [
           1,
           1,
           1,
           null,
           1,
+          null,
           1,
+          1,
+          1,
+          null,
           null
         ]
       },
-      "/Users/clayash/turing/3module/projects/viewing_party_lite/app/poros/movie.rb": {
+      "/Users/matthewdeming/turing/3Module/viewing_party_lite/app/poros/movie.rb": {
         "lines": [
           1,
           1,
@@ -120,7 +123,7 @@
           null
         ]
       },
-      "/Users/clayash/turing/3module/projects/viewing_party_lite/app/services/movie_service.rb": {
+      "/Users/matthewdeming/turing/3Module/viewing_party_lite/app/services/movie_service.rb": {
         "lines": [
           1,
           null,
@@ -163,7 +166,7 @@
           null
         ]
       },
-      "/Users/clayash/turing/3module/projects/viewing_party_lite/app/controllers/discover_controller.rb": {
+      "/Users/matthewdeming/turing/3Module/viewing_party_lite/app/controllers/discover_controller.rb": {
         "lines": [
           1,
           null,
@@ -173,13 +176,13 @@
           null
         ]
       },
-      "/Users/clayash/turing/3module/projects/viewing_party_lite/app/controllers/application_controller.rb": {
+      "/Users/matthewdeming/turing/3Module/viewing_party_lite/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/clayash/turing/3module/projects/viewing_party_lite/app/controllers/movies_controller.rb": {
+      "/Users/matthewdeming/turing/3Module/viewing_party_lite/app/controllers/movies_controller.rb": {
         "lines": [
           1,
           null,
@@ -203,7 +206,7 @@
           null
         ]
       },
-      "/Users/clayash/turing/3module/projects/viewing_party_lite/app/controllers/users_controller.rb": {
+      "/Users/matthewdeming/turing/3Module/viewing_party_lite/app/controllers/users_controller.rb": {
         "lines": [
           1,
           null,
@@ -212,7 +215,7 @@
           null,
           null,
           1,
-          2,
+          4,
           null,
           null,
           1,
@@ -220,20 +223,41 @@
           null,
           null,
           1,
+          2,
+          null,
+          2,
           1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
           1,
           null,
           null,
           1,
           null,
-          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
           1,
           null,
+          1,
+          2,
           null,
           null
         ]
       },
-      "/Users/clayash/turing/3module/projects/viewing_party_lite/app/controllers/parties_controller.rb": {
+      "/Users/matthewdeming/turing/3Module/viewing_party_lite/app/controllers/parties_controller.rb": {
         "lines": [
           1,
           null,
@@ -268,17 +292,17 @@
           null
         ]
       },
-      "/Users/clayash/turing/3module/projects/viewing_party_lite/app/controllers/welcome_controller.rb": {
+      "/Users/matthewdeming/turing/3Module/viewing_party_lite/app/controllers/welcome_controller.rb": {
         "lines": [
           1,
           null,
           1,
-          5,
+          6,
           null,
           null
         ]
       }
     },
-    "timestamp": 1657467647
+    "timestamp": 1658196882
   }
 }

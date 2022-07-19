@@ -4,5 +4,19 @@
   <%= f.text_field :name %>
   <%= f.label :email %>
   <%= f.text_field :email %>
+  <%= f.label :password %>
+  <%= f.text_field :password %>
+  <%= f.label :password_confirmation, "Password Confirmation" %>
+  <%= f.text_field :password_confirmation %>
   <%= f.submit "Register" %>
 <% end %>
+
+<body>
+  <% flash.each do |type, msg| %>
+  <div id="message" class="alert alert-primary">
+    <%= msg %>
+  </div>
+  <% end %>
+  <%= link_to "Home", '/' %>
+  <%= yield %>
+</body>

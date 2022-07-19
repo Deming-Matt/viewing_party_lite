@@ -1,17 +1,17 @@
 require 'rails_helper'
 
-RSpec.describe 'welcome page' do 
-  let!(:user_1) { User.create!(name: "Sam", email: "sam@zmail.com" ) }
-  let!(:user_2) { User.create!(name: "Hank", email: "hank@zmail.com" ) } 
-  let!(:user_3) { User.create!(name: "Tom", email: "tom@zmail.com") }
+RSpec.describe 'welcome page' do
+  let!(:user_1) { User.create!(name: "Sam", email: "sam@zmail.com", password: "Cat", password_confirmation: "Cat" ) }
+  let!(:user_2) { User.create!(name: "Hank", email: "hank@zmail.com", password: "Cat", password_confirmation: "Cat" ) }
+  let!(:user_3) { User.create!(name: "Tom", email: "tom@zmail.com", password: "Cat", password_confirmation: "Cat") }
 
-  it 'has title of application' do 
+  it 'has title of application' do
     visit root_path
 
     expect(page).to have_content("Viewing Party")
   end
 
-  it 'has button to navegate to user registration' do 
+  it 'has button to navegate to user registration' do
     visit root_path
 
     click_button "Register"
@@ -19,20 +19,28 @@ RSpec.describe 'welcome page' do
     expect(current_path).to eq(registration_path)
   end
 
-  it 'has list of existing users that link to user dashboard page' do 
-    visit root_path 
+  it 'has button to navegate to user login' do
+    visit root_path
+
+    click_button "Login"
+
+    expect(current_path).to eq(login_path)
+  end
+
+  it 'has list of existing users that link to user dashboard page' do
+    visit root_path
 
     expect(page).to have_content(user_1.name)
     expect(page).to have_content(user_2.name)
     expect(page).to have_content(user_3.name)
 
-    click_link user_1.name 
+    click_link user_1.name
 
     expect(current_path).to eq("/users/#{user_1.id}")
   end
 
-  it 'has link to landing page' do 
-    visit root_path 
+  it 'has link to landing page' do
+    visit root_path
 
     click_link "Back to the Welcome Page"
 
