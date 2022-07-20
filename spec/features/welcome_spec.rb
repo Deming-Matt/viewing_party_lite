@@ -27,7 +27,7 @@ RSpec.describe 'welcome page' do
     expect(current_path).to eq(login_path)
   end
 
-  it 'has list of existing users that link to user dashboard page' do
+  xit 'has list of existing users that link to user dashboard page' do
     visit root_path
 
     expect(page).to have_content(user_1.name)
@@ -45,5 +45,20 @@ RSpec.describe 'welcome page' do
     click_link "Back to the Welcome Page"
 
     expect(current_path).to eq(root_path)
+  end
+
+  it 'shows the landing page withour the list of existing users' do
+    visit root_path
+    expect(page).to_not have_content("#{user_1.name}")
+  end
+
+  it 'allows a registered user to see list of existing users email on landing page' do
+    visit root_path
+    click_button "Login"
+    fill_in "Email", with: "sam@zmail.com"
+    fill_in "Password", with: "Cat"
+    click_on "Log In"
+    expect(current_path).to eq(root_path)
+    expect(page).to have_content("hank@zmail.com")
   end
 end

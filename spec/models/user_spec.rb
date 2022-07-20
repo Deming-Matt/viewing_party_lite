@@ -30,9 +30,7 @@ RSpec.describe User, type: :model do
 
       click_on "Log In"
 
-      expect(current_path).to eq(root_path)
-
-      expect(page).to have_content("Welcome, #{user.username}")
+      expect(current_path).to eq('/')
     end
   end
 end

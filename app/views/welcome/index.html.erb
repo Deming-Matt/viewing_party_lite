@@ -1,9 +1,15 @@
 <h3> Viewing Party </h3>
+<% if current_user %>
+  <p>Welcome, you are logged in!</p>
+  <%= button_to 'Logout', '/logout', method: :delete %>
+<% else %>
+  <%= button_to 'Register', registration_path, method: :get %>
+  <%= button_to 'Login', login_path, method: :get %>
+<% end %>
 
-<%= button_to 'Register', registration_path, method: :get %>
-<%= button_to 'Login', login_path, method: :get %>
-
-<h5>Current Users:</h5>
-<% @users.each do |user| %>
-<%= link_to user.name, user_path(user.id) %></br>
-<%end%>
+<% if current_user %>
+  <h5>Current Users:</h5>
+  <% @users.each do |user| %>
+    <%= user.email %></br>
+  <% end %>
+<% end %>

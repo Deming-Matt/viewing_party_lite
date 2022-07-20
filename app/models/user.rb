@@ -7,5 +7,6 @@ class User < ApplicationRecord
   validates_presence_of :name
   validates_presence_of :password_digest
   validates :email, uniqueness: true, presence: true
-
+  enum role: %w(default manager admin)
+  
 end

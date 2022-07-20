@@ -16,26 +16,12 @@ class UsersController < ApplicationController
     user = User.create(user_params)
     # binding.pry
     if user.save
-      redirect_to "/users/#{user.id}"
+      session[:user_id] = user.id
+      redirect_to root_path
+      flash[:success] = "Welcome, #{user.email}!"
     else
       redirect_to "/registration"
       flash[:error] = user.errors.full_messages
-    end
-  end
-
-  def login_form
-  end
-
-  def login_user
-    # binding.pry
-    user = User.find_by(email: params[:email])
-    if user && user.authenticate(params[:password])
-      session[:name] = user.name
-      flash[:success] = "Welcome, #{user.name}"
-      redirect_to root_path
-    else
-      flash[:error] = "Incorrect credentials"
-      redirect_to login_path
     end
   end
 
